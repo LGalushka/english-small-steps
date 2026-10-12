@@ -1,75 +1,78 @@
-# React + TypeScript + Vite
+# English Small Steps
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive English lesson catalog for A1–A2 learners.
+Browse short lessons, search by title, and filter by category.
+Each lesson links to a post in the English Small Steps Lab Telegram channel.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Search lessons by title
+- Filter lessons by category
+- View lesson covers and descriptions
+- Open lessons in Telegram
+- Responsive layout for mobile and desktop
+- Empty state when no lessons match
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- CSS
+- Python and Pillow for image preparation
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Install Node.js and npm, then run:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone https://github.com/LGalushka/english-small-steps.git
+cd english-small-steps
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Open the local URL shown in the terminal.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Production Build
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Create a production build:
 
+```bash
+npm run build
 ```
+
+Preview it locally:
+
+```bash
+npm run preview
+```
+
+The build output is generated in the `dist` directory.
+
+## Project Structure
+
+- `src/components/` — UI components and their styles
+- `src/data/` — lesson data
+- `src/assets/` — images and icons
+- `public/` — static files, including the favicon
+- `scripts/` — Python scripts for preparing images
+
+## Image Optimization
+
+Images were resized with Pillow, and lesson covers were converted
+to WebP. The combined size of the bundled images decreased from
+approximately 18.2 MB to 0.96 MB.
+
+Python is only used to prepare images. It is not required to run
+or build the website.
+
+## Learning Goals
+
+This project was built to practice React components, TypeScript
+props, state management, filtering, responsive CSS, and image
+optimization.
+
+## Telegram Channel
+
+[English Small Steps Lab](https://t.me/english_small_steps_lab)
