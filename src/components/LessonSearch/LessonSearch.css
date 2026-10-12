@@ -1,0 +1,50 @@
+.lesson-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: var(--color-card);
+  border: 1px solid var(--color-page);
+  border-radius: 24px;
+}
+
+.lesson-search__input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 16px;
+  color: var(--color-muted);
+}
+
+.lesson-search__input::placeholder {
+  color: var(--color-muted);
+  opacity: 1;
+}
+
+.lesson-search img {
+  flex-shrink: 0;
+}
+
+.lesson-search:focus-within {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .lesson-search {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .lesson-search img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .lesson-search__input {
+    font-size: 16px;
+  }
+}

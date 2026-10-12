@@ -1,0 +1,44 @@
+.lesson-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.lesson-filter button {
+  padding: 10px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  background-color: var(--color-card);
+  color: var(--color-primary);
+  font-family: "Segoe UI", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.lesson-filter button:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.lesson-filter button[aria-pressed="true"] {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.lesson-filter button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .lesson-filter {
+    gap: 8px;
+  }
+
+  .lesson-filter button {
+    font-size: 14px;
+    padding: 8px 12px;
+    min-height: 44px;
+  }
+}

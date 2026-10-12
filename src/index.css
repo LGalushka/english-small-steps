@@ -1,0 +1,33 @@
+:root {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+
+  color: #164e52;
+  background-color: #fff8ed;
+
+  --color-primary: #164e52;
+  --color-primary-hover: #103d40;
+  --color-page: #dedbd5;
+  --color-surface: #fff8ed;
+  --color-card: #fffdf9;
+  --color-accent: #f6b879;
+  --color-muted: #647472;
+  --color-border: #dedbd3;
+  --color-foter-line: #e1ddd4;
+  --color-border: #e5e0d7;
+  --color-surface-hover: #f5e6d2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #dedbd5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
